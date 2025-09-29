@@ -150,10 +150,13 @@ document.addEventListener("DOMContentLoaded", function () {
           waterCount.textContent = water;
         }
         const waterCard = document.querySelector(".team-card.water");
-        if (waterCard) {
-          waterCard.classList.remove("card-flip");
-          void waterCard.offsetWidth;
-          waterCard.classList.add("card-flip");
+        if (waterCard && window.anime) {
+          window.anime({
+            targets: waterCard,
+            scale: [1, 1.18, 0.96, 1.06, 1],
+            duration: 850,
+            easing: "easeOutElastic(1, .6)",
+          });
         }
       } else if (team === "zero") {
         zero = zero + 1;
@@ -162,10 +165,13 @@ document.addEventListener("DOMContentLoaded", function () {
           zeroCount.textContent = zero;
         }
         const zeroCard = document.querySelector(".team-card.zero");
-        if (zeroCard) {
-          zeroCard.classList.remove("card-flip");
-          void zeroCard.offsetWidth;
-          zeroCard.classList.add("card-flip");
+        if (zeroCard && window.anime) {
+          window.anime({
+            targets: zeroCard,
+            scale: [1, 1.18, 0.96, 1.06, 1],
+            duration: 850,
+            easing: "easeOutElastic(1, .6)",
+          });
         }
       } else if (team === "power") {
         power = power + 1;
@@ -174,10 +180,13 @@ document.addEventListener("DOMContentLoaded", function () {
           powerCount.textContent = power;
         }
         const powerCard = document.querySelector(".team-card.power");
-        if (powerCard) {
-          powerCard.classList.remove("card-flip");
-          void powerCard.offsetWidth;
-          powerCard.classList.add("card-flip");
+        if (powerCard && window.anime) {
+          window.anime({
+            targets: powerCard,
+            scale: [1, 1.18, 0.96, 1.06, 1],
+            duration: 850,
+            easing: "easeOutElastic(1, .6)",
+          });
         }
       }
 
